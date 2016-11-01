@@ -5,9 +5,9 @@
  *
  */
 .sk-spinner-pulse {
-  width: 70px;
-  height: 70px;
-  margin: 70px auto;
+  width: 60px;
+  height: 60px;
+  margin: 60px auto;
   background-color: white;
   border-radius: 100%;
   -webkit-animation: sk-pulseScaleOut 2.0s infinite ease-out;

@@ -31,7 +31,7 @@
             .loading {
                 width: 100%;
                 position: absolute;
-                top: 66%;
+                top: 50%;
                 bottom: 20%;
                 left: 0;
                 right: 0;
@@ -39,16 +39,35 @@
                 margin: auto;
             }
 
-            h1 { 
+            #connecting { 
                 color: white; 
                 font-family: 'Open Sans', sans-serif;
                 font-size: 3em; 
                 font-weight: 200;
                 letter-spacing: 2px;
                 text-align: center; 
-                
             }
 
+            #quote {
+                color: white;
+
+                margin-top: 14em; 
+                font-family: 'Open Sans', sans-serif;
+                font-size: 1.5em; 
+                font-weight: 200;
+                font-style: italic;
+                letter-spacing: 2px;
+                text-align: center; 
+            }
+
+            #author {
+                color: white;
+                font-family: 'Lato', sans-serif;
+                font-size: 1.3em; 
+                font-weight: 200;
+                letter-spacing: 2px;
+                text-align: center; 
+            }
 
         </style>
 
@@ -56,8 +75,12 @@
     <body>
 
         <div class="loading">
-            <h1> Connecting to the ROV</h1>
+            
             <div class="sk-spinner sk-spinner-pulse"></div>
+            <h1 id="connecting"> Connecting to the ROV</h1>
+
+            <h1 id="quote"> The sea, once it casts its spell, holds one in its net of wonder forever. </h1>
+            <h2 id="author"> -Jacques Cousteau- </h2> 
         </div>
         
 
