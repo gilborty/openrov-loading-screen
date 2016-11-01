@@ -14,170 +14,52 @@
         <link rel="stylesheet" type="text/css" href="./css/three-bounce.css">
         <link rel="stylesheet" type="text/css" href="./css/wave.css">
         
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
 
         <style>
-
-            /* -------------------------------------------------------------------
-                Credit for the original wave animation and assets: Andy Fitzsimon
-                Link to Codepen: http://codepen.io/andyfitz/pen/akAKdV
-            ------------------------------------------------------------------- */
-            .parallax > use {
-                animation: move-forever 12s linear infinite; 
-            }
-
-            .parallax > use:nth-child(1) {
-                animation-delay: -2s; 
-            }
-            
-            .parallax > use:nth-child(2) {
-                animation-delay: -2s;
-                animation-duration: 5s; 
-            }
-
-            .parallax > use:nth-child(3) {
-                animation-delay: -4s;
-                animation-duration: 3s; 
-            }
-
-            @keyframes move-forever {
-                0% {
-                    transform: translate(-90px, 0%); 
-                }
-                100% {
-                    transform: translate(85px, 0%); 
-                } 
-            }
-
-            .editorial {
-                display: block;
-                width: 100%;
-                height: 10em;
-                margin: 0; 
+            html {
+                height: 100%;
             }
 
             body {
-                /*background-color: #CCCCCC;*/
-                background: linear-gradient(#CCCCCC, #34A1FF);
-                margin: 0;
-                padding: 9em 0 0 0; 
+                background: linear-gradient(#215E71,#0A133A);
             }
 
-            .content {
-                background-color: #1D598D;
-                text-align: center;
-                min-height: 75vh;
-                margin: -.1em 0 0 0;
-                padding: 2em;
-                color: #eee; 
-                
-            }
-            
-            .content h1 {
-                font-family: 'Lato',sans-serif;
-                margin-top:-1.3em;
-                font-weight: 100;
-                font-size: 4em; 
-                font-size: 4em;  
+            .loading {
+                width: 100%;
+                position: absolute;
+                top: 66%;
+                bottom: 20%;
+                left: 0;
+                right: 0;
+
+                margin: auto;
             }
 
-            #quote {
-                padding-top: 5em;
-                margin-bottom: 0.3em;
-                font-family: 'Lato',sans-serif;
-                font-style: italic;
-                font-size: 4em;
+            h1 { 
+                color: white; 
+                font-family: 'Open Sans', sans-serif;
+                font-size: 3em; 
+                font-weight: 200;
+                letter-spacing: 2px;
+
+                text-align: center; 
             }
 
-            #author {
-                font-family: 'Open Sans',sans-serif;
-                font-size: 1.5em;
-            }
-
-            #loading {
-                font-family: 'Open Sans',sans-serif;
-                font-size: 1.0em;
-                
-                padding-top: 15em;
-            }
-
-            /*prevent many large-by-comparison ripples by shrinking the height*/
-            @media (max-width: 50em) {
-                .content h1 {
-                    font-size: 12vmax; 
-                }
-
-                .editorial {
-                    height: 17vw; 
-                } 
-            }
 
         </style>
 
     </head>
     <body>
-        <svg class="editorial"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 24 150 28"
-            preserveAspectRatio="none">
-            <defs>
-            <path 
-                id="gentle-wave"
-                d="m -160,44.4 c 30,0 58,
-                    -18 87.7,-18 30.3,0 58.3,
-                    18 87.3,18 30,0 58,-18 88,
-                    -18 30,0 58,18 88,18 l 0,
-                    34.5 -351,0 z" />
-            </defs>
-            <g class="parallax">
-                <use xlink:href="#gentle-wave" x="50" y="0" fill="#34A1FF"/>
-                <use xlink:href="#gentle-wave" x="50" y="3" fill="#2A81CC"/>
-                <use xlink:href="#gentle-wave" x="50" y="6" fill="#1D598D"/>  
-            </g>
-        </svg>
 
-        <div class="content">
-            <h1>  </h1>
-
-            <!--Here we can load quotes and authors from a json file -->
-            <p id="quote">The Sea, once it casts its spell, holds one in its net of wonder forever.</p>
-            <p id="author">- Jacques Cousteau -</p>
-
-            <!--<div id="loading">
-                <p> Loading OpenROV Cockpit </p>
-            </div>-->
-            
-            <div class="sk-double-bounce">
-                <div class="sk-child sk-double-bounce1"></div>
-                <div class="sk-child sk-double-bounce2"></div>
-            </div>
-
+        <div class="loading">
+            <h1> Connecting to the ROV</h1>
             <div class="sk-spinner sk-spinner-pulse"></div>
-            <div class="sk-wave">
-                <div class="sk-rect sk-rect1"></div>
-                <div class="sk-rect sk-rect2"></div>
-                <div class="sk-rect sk-rect3"></div>
-                <div class="sk-rect sk-rect4"></div>
-                <div class="sk-rect sk-rect5"></div>
-            </div>
-            <div class="sk-circle">
-                <div class="sk-circle1 sk-child"></div>
-                <div class="sk-circle2 sk-child"></div>
-                <div class="sk-circle3 sk-child"></div>
-                <div class="sk-circle4 sk-child"></div>
-                <div class="sk-circle5 sk-child"></div>
-                <div class="sk-circle6 sk-child"></div>
-                <div class="sk-circle7 sk-child"></div>
-                <div class="sk-circle8 sk-child"></div>
-                <div class="sk-circle9 sk-child"></div>
-                <div class="sk-circle10 sk-child"></div>
-                <div class="sk-circle11 sk-child"></div>
-                <div class="sk-circle12 sk-child"></div>
-            </div>
-
         </div>
+        
 
         <script>
             //Loads a json file of quotes and authors and places them on the screen for loading.
