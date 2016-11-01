@@ -10,8 +10,8 @@
   margin: 70px auto;
   background-color: white;
   border-radius: 100%;
-  -webkit-animation: sk-pulseScaleOut 1.5s infinite ease-out;
-          animation: sk-pulseScaleOut 1.5s infinite ease-out; }
+  -webkit-animation: sk-pulseScaleOut 2.0s infinite ease-out;
+          animation: sk-pulseScaleOut 2.0s infinite ease-out; }
 
 @-webkit-keyframes sk-pulseScaleOut {
   0% {
